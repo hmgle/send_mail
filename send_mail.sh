@@ -28,7 +28,7 @@ Date: `date` +0800
 Mime-Version: 1.0
 Content-Type: text/plain; charset="gb2312"; format=flowed
 
-ip camera test body
+html text
 EOF
     test -r $email_content_txt && cat $email_content_txt
 }
@@ -37,7 +37,6 @@ send_mail()
 {
     echo "in send_mail"
     (
-    echo $smtp_auth_user
     sleep 7
     for comm in "helo localhost" "auth login" $smtp_auth_user "$smtp_auth_pwd" "MAIL FROM:<$sender>" "RCPT TO:<$reciver>" "data"
     do
