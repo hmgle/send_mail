@@ -7,8 +7,8 @@ reciver=$2
 subject=$3
 email_content_txt=$4
 mailserver=$5
-smtp_auth_user=$6
-smtp_auth_pwd=$7
+smtp_auth_user=`echo -n "$6" | base64`
+smtp_auth_pwd=`echo -n "$7" | base64`
 
 if [ "$#" != 7 ]; then
     echo
