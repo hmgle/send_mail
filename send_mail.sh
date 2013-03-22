@@ -26,9 +26,9 @@ From:$sender
 Subject: $subject
 Date: `date` +0800
 Mime-Version: 1.0
-Content-Type: text/plain; charset="gb2312"; format=flowed
+Content-Type: text/plain; charset="UTF-8"; format=flowed
 
-html text
+
 EOF
     test -r $email_content_txt && cat $email_content_txt
 }
